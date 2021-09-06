@@ -1,17 +1,15 @@
-// genero 5 numeri casualmente e li metto in un'array.
+// 1) genero 5 numeri casualmente e li metto in un'array.
 var winNumbers = [];
 
 for (i=0; i<5; i++){
     winNumbers.push(Math.floor(Math.random() * 100 + 1));
 }
-// creo un'alert che annuncia i numeri genrati
+// 2) creo un'alert che annuncia i numeri genrati
 alert("i numeri da memorizzare sono: " + winNumbers[0] + " - " + winNumbers[1] + " - " + winNumbers[2] + " - " + winNumbers[3] + " - " + winNumbers[4]);
 
 console.log(winNumbers);
 
-// Da li parte un timer di 30 secondi.
-// Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+// 3) Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 setTimeout(
     function(){
         let playerNum = [];
@@ -26,7 +24,7 @@ setTimeout(
             // controllo se il numero non sia già stato inserito
             if (playerNum.includes(input)){
                 do{
-                    input = parseInt(prompt('HAI GIA\' INSERITO QUESTO NUMERO!! Inserisci il ' + (i + 1) + '° numero mostrato in precedenza'));
+                    input = parseInt(prompt('HAI GIA\' INSERITO QUESTO NUMERO!!'));
                 } while(isNaN(input) || input == "" || playerNum.includes(input));
             };
 
@@ -36,6 +34,9 @@ setTimeout(
                 playerNum.push(input)
             };
         };
+
+        // 4) Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+        alert("hai indovinato " + playerNum.length + " numeri su 5, i numeri corretti che hai inserito sono: " + playerNum);
 
 
         console.log(playerNum);
