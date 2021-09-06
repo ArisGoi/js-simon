@@ -5,6 +5,7 @@ for (i=0; i<5; i++){
     winNumbers.push(Math.floor(Math.random() * 100 + 1));
 }
 // 2) creo un'alert che annuncia i numeri genrati
+alert("regole del gioco: ti verranno mostrati 5 numeri, hai tutto il tempo che vuoi per memorizzarli, una volta premuto su \"OK\" dovrai aspettare 30 secondi, successivamente ti verrà chiesto di inserire quelli che ti ricordi");
 alert("i numeri da memorizzare sono: " + winNumbers[0] + " - " + winNumbers[1] + " - " + winNumbers[2] + " - " + winNumbers[3] + " - " + winNumbers[4]);
 
 console.log(winNumbers);
@@ -41,4 +42,4 @@ setTimeout(
 
         console.log(playerNum);
     }
-, 2 * 1000); //timer di 30 secondi
+, 30 * 1000); //timer di 30 secondi
